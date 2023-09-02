@@ -2,18 +2,20 @@
   background: var(--clr-primary-500);
   color: white;
   padding: 0.5rem 3rem;
+}
+.duotone-header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.duotone-header ul {
+.duotone-header .container ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
   gap: 1rem;
 }
-.duotone-header ul a {
+.duotone-header .container ul a {
   font-size: 1.1rem;
 }
 
@@ -25,12 +27,14 @@
 }
 
 .page-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   width: 100vw;
   padding: 1rem 3rem;
   background: #f8f8fb;
+}
+.page-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .page-header .navbar-right {
   display: flex;
