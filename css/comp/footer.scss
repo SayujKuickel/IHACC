@@ -1,5 +1,5 @@
 footer {
-  --__footer-columns: 3;
+  --__footer-columns: 4;
 
   margin-block-start: 5rem;
   background: var(--clr-primary-800);
@@ -21,16 +21,9 @@ footer {
       padding: 0;
     }
 
-    .links-ul {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-    }
-
     .links {
-      font-weight: 600;
-      &:hover {
-        color: var(--clr-primary-500);
-      }
+      color: var(--clr-white-400);
+      font-weight: 800;
     }
   }
 
