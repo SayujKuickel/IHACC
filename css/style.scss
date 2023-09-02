@@ -1,0 +1,230 @@
+@use "./essential/colors" as *;
+@use "./essential/type-scale" as *;
+
+@import url(./essential/reset.css);
+@import url(./essential/sizes.css);
+@import url(./essential/type-scale.css);
+@import url(./utils/utilityClasses.css);
+@import url(./comp/header.css);
+@import url(./comp/footer.css);
+@import url(./comp/buttons.css);
+@import url(./page/about.scss);
+
+:root {
+  --hsl-white-100: 0 0% 100%;
+  --hsl-white-200: 0 0% 91%;
+  --hsl-white-300: 0 0% 82%;
+  --hsl-white-400: 0 0% 73%;
+  --hsl-white-500: 0 0% 64%;
+  --hsl-black-100: 0 0% 10%;
+  --hsl-black-200: 0 0% 9%;
+  --hsl-black-300: 0 0% 8%;
+  --hsl-black-400: 0 0% 7%;
+  --hsl-black-500: 0 0% 0%;
+
+  @each $color, $shades in $colors {
+    @each $shade, $value in $shades {
+      --clr-#{$color}-#{$shade}: #{$value};
+    }
+  }
+
+  @each $size, $fontsize in $type-scale {
+    @each $size, $value in $fontsize {
+      --fs-#{$size}: #{$value};
+    }
+  }
+
+  @each $size, $fontsize in $type-scale {
+    @each $size, $value in $fontsize {
+      --fs-#{$size}: #{$value};
+    }
+  }
+}
+
+@each $color, $shades in $colors {
+  @each $shade, $value in $shades {
+    .clr-#{$color}-#{$shade} {
+      color: #{$value};
+    }
+  }
+}
+
+.main-content {
+  width: min(100ch, 100% - 1rem);
+  margin-inline: auto;
+  margin-block-start: 2rem;
+}
+
+.mission-vison-cards-container {
+  margin-block: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+
+  @media screen and (max-width: 700px) {
+    & {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  .card {
+    aspect-ratio: 3/2;
+    background: var(--clr-primary-800);
+    padding: 1rem;
+    color: white;
+    border-radius: 1rem;
+    box-shadow: -1px 6px 19px 0px hsl(var(--hsl-black-300) / 0.5);
+
+    transition: 0.5s box-shadow cubic-bezier(0.075, 0.82, 0.165, 1);
+    &:hover {
+      box-shadow: -1px 6px 19px 0px hsl(var(--hsl-black-300) / 0.8);
+    }
+
+    position: relative;
+    overflow: hidden;
+
+    .card-title {
+      font-weight: 700;
+      font-size: var(--fs-400);
+    }
+    .card-content {
+      width: 85%;
+      color: #eeffeee2;
+    }
+
+    img {
+      scale: 1.45;
+      opacity: 0.3;
+      object-fit: contain;
+      mix-blend-mode: multiply;
+    }
+
+    .card-main {
+      //this marginis a locally scoped variable change this to chage the padding of the card itself
+      --__margin: 1rem;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      margin: var(--__margin);
+      height: calc(100% - var(--__margin) * 2);
+      width: calc(100% - var(--__margin) * 2);
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+
+  .contact-btn {
+    background: white;
+    border: 0;
+
+    margin-inline-start: auto;
+    width: 60%;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50vw;
+
+    &:hover {
+      background: lightgrey;
+      cursor: pointer;
+    }
+  }
+}
+
+.services-wrapper {
+  --__no-of-cols: 3;
+  display: grid;
+  grid-template-columns: repeat(var(--__no-of-cols), 1fr);
+
+  width: min(70vw, 100% - 2rem);
+  margin-inline: auto;
+
+  .service-card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+
+    .img-container {
+      width: 70%;
+      overflow: hidden;
+      border-radius: 100vw;
+      img {
+        aspect-ratio: 1;
+        object-fit: cover;
+      }
+    }
+
+    & > *:not(.img-container) {
+      margin: 0;
+    }
+
+    .service-label {
+      color: var(--clr-primary-800);
+      font-size: 1.125rem;
+      margin-bottom: 0.5rem;
+      text-transform: capitalize;
+    }
+    .service-subtext {
+      line-height: 1.4;
+      width: 80%;
+      font-size: 0.8rem;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    --__no-of-cols: 2;
+  }
+  @media screen and (max-width: 500px) {
+    --__no-of-cols: 1;
+  }
+}
+
+.contact-form-wrapper {
+  background: var(--clr-primary-800);
+  padding: 2rem 4rem;
+  margin-block: 6rem;
+  display: grid;
+  place-content: center;
+
+  --__br-outer: 1rem;
+  --__br-inner: calc(var(--__br-outer) / 2.5);
+  --__gap: 0.2rem;
+
+  .row-1 > *:nth-child(1) {
+    border-radius: var(--__br-outer) var(--__br-inner) var(--__br-inner)
+      var(--__br-inner);
+  }
+  .row-1 > *:nth-child(2) {
+    border-radius: var(--__br-inner) var(--__br-outer) var(--__br-inner)
+      var(--__br-inner);
+  }
+
+  .row-2 > * {
+    border-radius: var(--__br-inner);
+  }
+  .row-3 > * {
+    border-radius: var(--__br-inner);
+  }
+  .row-4 > * {
+    border-radius: var(--__br-inner) var(--__br-inner) var(--__br-outer)
+      var(--__br-outer);
+  }
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--__gap);
+    .row {
+      display: flex;
+      gap: var(--__gap);
+
+      input,
+      textarea {
+        flex-grow: 1;
+        border: 0;
+        padding: 0.5rem 1rem;
+      }
+    }
+  }
+}
