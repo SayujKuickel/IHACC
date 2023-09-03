@@ -8,7 +8,8 @@
 @import url(./comp/header.css);
 @import url(./comp/footer.css);
 @import url(./comp/buttons.css);
-@import url(./page/about.scss);
+@import url(./page/about.css);
+@import url(./page/services.css);
 
 :root {
   --hsl-white-100: 0 0% 100%;
@@ -54,83 +55,6 @@
   margin-inline: auto;
   margin-block-start: 2rem;
 }
-
-// .mission-vison-cards-container {
-//   margin-block: 2rem;
-//   display: grid;
-//   grid-template-columns: repeat(2, 1fr);
-//   gap: 1rem;
-
-//   @media screen and (max-width: 700px) {
-//     & {
-//       grid-template-columns: repeat(1, 1fr);
-//     }
-//   }
-//   .card {
-//     aspect-ratio: 3/2;
-//     background: var(--clr-primary-800);
-//     padding: 1rem;
-//     color: white;
-//     border-radius: 1rem;
-//     box-shadow: -1px 6px 19px 0px hsl(var(--hsl-black-300) / 0.5);
-
-//     transition: 0.5s box-shadow cubic-bezier(0.075, 0.82, 0.165, 1);
-//     &:hover {
-//       box-shadow: -1px 6px 19px 0px hsl(var(--hsl-black-300) / 0.8);
-//     }
-
-//     position: relative;
-//     overflow: hidden;
-
-//     .card-title {
-//       font-weight: 700;
-//       font-size: var(--fs-400);
-//     }
-//     .card-content {
-//       width: 85%;
-//       color: #eeffeee2;
-//     }
-
-//     img {
-//       scale: 1.45;
-//       opacity: 0.3;
-//       object-fit: contain;
-//       mix-blend-mode: multiply;
-//     }
-
-//     .card-main {
-//       //this marginis a locally scoped variable change this to chage the padding of the card itself
-//       --__margin: 1rem;
-
-//       position: absolute;
-//       top: 0;
-//       left: 0;
-
-//       margin: var(--__margin);
-//       height: calc(100% - var(--__margin) * 2);
-//       width: calc(100% - var(--__margin) * 2);
-
-//       display: flex;
-//       flex-direction: column;
-//       justify-content: space-between;
-//     }
-//   }
-
-//   .contact-btn {
-//     background: white;
-//     border: 0;
-
-//     margin-inline-start: auto;
-//     width: 60%;
-//     padding: 0.5rem 1.5rem;
-//     border-radius: 50vw;
-
-//     &:hover {
-//       background: lightgrey;
-//       cursor: pointer;
-//     }
-//   }
-// }
 
 .services-wrapper {
   --__no-of-cols: 3;
@@ -271,6 +195,13 @@
   }
 }
 
+@media screen and (width < 768px) {
+  .row .text-container .mission-title {
+    font-size: var(--fs-500);
+    margin-block: 1rem 0.5rem;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .mission-vision-wrapper {
     display: grid;
@@ -346,9 +277,9 @@
   }
 }
 .mission-vision-wrapper {
-  --__mission-clr: red;
-  --__vision-clr: rgb(128, 17, 35);
-  --__goal-clr: green;
+  --__vision-clr: #885aba;
+  --__mission-clr: #ffc037;
+  --__goal-clr: #14c8bc;
 
   .mission-clr {
     background: var(--__mission-clr);

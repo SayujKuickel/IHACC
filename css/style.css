@@ -5,7 +5,8 @@
 @import url(./comp/header.css);
 @import url(./comp/footer.css);
 @import url(./comp/buttons.css);
-@import url(./page/about.scss);
+@import url(./page/about.css);
+@import url(./page/services.css);
 :root {
   --hsl-white-100: 0 0% 100%;
   --hsl-white-200: 0 0% 91%;
@@ -252,6 +253,12 @@
   aspect-ratio: 1;
 }
 
+@media screen and (width < 768px) {
+  .row .text-container .mission-title {
+    font-size: var(--fs-500);
+    margin-block: 1rem 0.5rem;
+  }
+}
 @media screen and (min-width: 768px) {
   .mission-vision-wrapper {
     display: grid;
@@ -313,9 +320,9 @@
   }
 }
 .mission-vision-wrapper {
-  --__mission-clr: red;
-  --__vision-clr: rgb(128, 17, 35);
-  --__goal-clr: green;
+  --__vision-clr: #885aba;
+  --__mission-clr: #ffc037;
+  --__goal-clr: #14c8bc;
 }
 .mission-vision-wrapper .mission-clr {
   background: var(--__mission-clr);
