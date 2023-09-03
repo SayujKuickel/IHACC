@@ -232,10 +232,11 @@
 .mission-vision-wrapper {
   display: flex;
   flex-direction: column;
-
+  margin-block: 2rem 4rem;
   .mission-img-container {
     display: none;
   }
+
   * {
     margin: 0;
   }
@@ -255,18 +256,13 @@
   }
 
   .section-logo-container {
-    border: 0.5rem solid white;
+    border: 0.2rem solid white;
     border-radius: 100vw;
     overflow: hidden;
-
-    padding: 1.5rem;
+    padding: 1.2rem;
 
     display: grid;
     place-content: center;
-
-    svg {
-      font-size: 10rem;
-    }
 
     img {
       width: 5rem;
