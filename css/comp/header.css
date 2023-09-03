@@ -8,6 +8,11 @@
   justify-content: space-between;
   align-items: center;
 }
+@media screen and (width < 768px) {
+  .duotone-header .container {
+    flex-direction: column;
+  }
+}
 .duotone-header .container ul {
   list-style: none;
   margin: 0;
@@ -27,9 +32,8 @@
 }
 
 .page-header {
-  width: 100vw;
   padding: 1rem 3rem;
-  background: #f8f8fb;
+  background: white;
 }
 .page-header .container {
   display: flex;
