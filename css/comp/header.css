@@ -23,6 +23,10 @@
 .duotone-header .container ul a {
   font-size: 1.1rem;
 }
+.duotone-header .fa-facebook:hover,
+.duotone-header .fa-instagram:hover {
+  color: white;
+}
 
 .sticky {
   position: sticky;
