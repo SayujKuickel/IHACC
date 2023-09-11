@@ -84,7 +84,6 @@
 }
 
 .img-wrapper {
-  background: pink;
   display: grid;
   place-items: center;
 }
