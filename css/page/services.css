@@ -77,4 +77,25 @@
   bottom: 0;
   background: var(--clr-primary-500);
   transition: all 0.3s ease;
+}
+
+.grid-2 {
+  gap: 2rem;
+}
+
+.img-wrapper {
+  background: pink;
+  display: grid;
+  place-items: center;
+}
+.img-wrapper img {
+  aspect-ratio: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 30vw;
+}
+@media screen and (width < 768px) {
+  .img-wrapper img {
+    width: 100%;
+  }
 }/*# sourceMappingURL=services.css.map */
