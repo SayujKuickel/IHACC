@@ -4,6 +4,10 @@
   margin-inline: auto;
 }
 
+.text-left {
+  text-align: left;
+}
+
 .subtext {
   text-align: center;
   max-width: 60ch;
@@ -19,12 +23,23 @@
 }
 
 .section-gap {
-  margin-block-start: 7rem;
+  margin-block-start: 5rem;
 }
 
 .label {
   text-transform: uppercase;
   font-weight: bold;
+}
+
+.grid-2 {
+  --___noOfCols: 2;
+  display: grid;
+  grid-template-columns: repeat(var(--___noOfCols), 1fr);
+}
+@media screen and (width < 768px) {
+  .grid-2 {
+    --___noOfCols: 1;
+  }
 }
 
 /* Margin Inline Start */
@@ -360,7 +375,15 @@
   margin-inline: auto;
 }
 
+.mi-0 {
+  margin-inline: 0;
+}
+
 /* Margin Block */
+.mb-0 {
+  margin-block: 1rem;
+}
+
 .mb-1 {
   margin-block: 1rem;
 }

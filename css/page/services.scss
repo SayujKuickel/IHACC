@@ -1,29 +1,23 @@
 .half-banner-wrapper {
   position: relative;
-  height: 45vh;
   color: white;
 
-  .img-container {
-    position: relative;
+  img {
+    width: 100%;
+    height: 50vh;
+
+    object-fit: cover;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
 
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-
-      background-color: rgba(0, 0, 2, 0.5);
-    }
+    background-color: rgba(0, 0, 2, 0.5);
   }
 
   .half-banner-content {
@@ -33,6 +27,7 @@
     left: 0;
     width: 100%;
     height: 100%;
+
     .container {
       display: flex;
       flex-direction: column;
@@ -42,18 +37,19 @@
 
       h1 {
         text-align: center;
+        font-weight: 700;
         font-size: var(--fs-700);
       }
-    }
-  }
-}
 
-@media screen and (width > 768px) {
-  h1 {
-    font-size: calc(var(--fs-800) * 2);
-    margin-block: 1rem 1.5rem;
-    text-align: center;
-    font-weight: 800;
+      @media screen and (width > 768px) {
+        h1 {
+          font-size: calc(var(--fs-700) * 2);
+          margin-block: 1rem 1.5rem;
+          text-align: center;
+          font-weight: 800;
+        }
+      }
+    }
   }
 }
 

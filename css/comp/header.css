@@ -150,6 +150,7 @@
   max-width: 35ch;
   text-transform: capitalize;
   margin: 0;
+  text-align: left;
 }
 @media screen and (min-width: 700px) {
   .carousel-item-header .carousel-item-content h1 {
