@@ -1,8 +1,13 @@
+.body-content {
+  width: min(100ch, 100% - 4rem);
+}
+
 .text-center {
   text-align: center;
   display: block;
   margin-inline: auto;
 }
+
 .text-left {
   text-align: left;
 }
@@ -44,11 +49,13 @@
 .mi-auto {
   margin-inline: auto;
 }
+
 @for $i from 0 through 10 {
   .gap-#{$i} {
     gap: #{$i}rem;
   }
 }
+
 @for $i from 0 through 10 {
   .mi-#{$i} {
     margin-inline: #{$i}rem;

@@ -1,3 +1,7 @@
+.body-content {
+  width: min(100ch, 100% - 4rem);
+}
+
 .text-center {
   text-align: center;
   display: block;
