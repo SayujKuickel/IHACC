@@ -360,4 +360,14 @@
   width: fit-content;
   margin-inline: auto;
   margin-block: 2rem 1rem;
+}
+
+.ndis div:nth-child(1),
+.ndis div:nth-child(2) {
+  display: grid;
+  height: 100%;
+  place-content: center;
+}
+.ndis .ndis-logo {
+  width: 70%;
 }/*# sourceMappingURL=style.css.map */

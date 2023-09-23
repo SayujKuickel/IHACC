@@ -321,3 +321,15 @@
     margin-block: 2rem 1rem;
   }
 }
+
+.ndis {
+  div:nth-child(1),
+  div:nth-child(2) {
+    display: grid;
+    height: 100%;
+    place-content: center;
+  }
+  .ndis-logo {
+    width: 70%;
+  }
+}

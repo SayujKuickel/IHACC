@@ -5,6 +5,9 @@ footer {
   color: white;
   padding: 4rem 2rem;
 }
+footer a:hover {
+  color: white;
+}
 footer .footer-grid {
   margin-inline: 6rem;
   display: grid;

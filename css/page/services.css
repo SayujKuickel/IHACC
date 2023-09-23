@@ -8,6 +8,11 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
+.half-banner-wrapper .half-banner-subtext {
+  max-width: 60ch;
+  text-align: center;
+  margin-inline: auto;
+}
 .half-banner-wrapper::before {
   content: "";
   position: absolute;
@@ -41,6 +46,7 @@
   .half-banner-wrapper .half-banner-content .container h1 {
     font-size: calc(var(--fs-700) * 2);
     margin-block: 1rem 1.5rem;
+    margin-block-end: 0;
     text-align: center;
     font-weight: 800;
   }
@@ -96,5 +102,44 @@
 @media screen and (width < 768px) {
   .img-wrapper img {
     width: 100%;
+  }
+}
+
+@media screen and (width > 768px) {
+  .service-section .services-text-container .section-title {
+    font-size: var(--fs-700);
+  }
+}
+.service-section .sevice-item {
+  margin-block: 8rem;
+  display: flex;
+  gap: 1rem;
+}
+.service-section .sevice-item .services-img-container,
+.service-section .sevice-item .services-text-container {
+  flex-basis: 50%;
+}
+.service-section .sevice-item .services-img-container {
+  display: grid;
+  place-items: center;
+}
+.service-section .sevice-item .services-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.service-section .sevice-item .services-text-container .section-title,
+.service-section .sevice-item .services-text-container h2 {
+  margin: 0;
+}
+.service-section .sevice-item .services-text-container .service-description {
+  text-align: justify;
+}
+.service-section .sevice-item:nth-of-type(even) {
+  background: red;
+}
+@media screen and (width < 600px) {
+  .service-section .sevice-item {
+    flex-direction: column;
   }
 }/*# sourceMappingURL=services.css.map */
