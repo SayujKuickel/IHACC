@@ -622,4 +622,58 @@
 
 .pbe-10 {
   padding-block-end: 10rem;
+}
+
+.half-banner-wrapper {
+  position: relative;
+  color: white;
+}
+.half-banner-wrapper img {
+  width: 100%;
+  height: 50vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.half-banner-wrapper .half-banner-subtext {
+  max-width: 60ch;
+  text-align: center;
+  margin-inline: auto;
+}
+.half-banner-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 2, 0.5);
+}
+.half-banner-wrapper .half-banner-content {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.half-banner-wrapper .half-banner-content .container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  padding-block: 3rem;
+}
+.half-banner-wrapper .half-banner-content .container h1 {
+  text-align: center;
+  font-weight: 700;
+  font-size: var(--fs-700);
+}
+@media screen and (width > 768px) {
+  .half-banner-wrapper .half-banner-content .container h1 {
+    font-size: calc(var(--fs-700) * 2);
+    margin-block: 1rem 1.5rem;
+    margin-block-end: 0;
+    text-align: center;
+    font-weight: 800;
+  }
 }/*# sourceMappingURL=utilityClasses.css.map */
