@@ -75,7 +75,6 @@
 @media screen and (width > 768px) {
   .service-section .service-item {
     grid-template-columns: 1fr 1fr;
-    margin-block: 6rem;
   }
   .service-section .service-item .services-text-container,
   .service-section .service-item .services-img-container {
