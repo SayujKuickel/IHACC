@@ -53,7 +53,7 @@
 
 .service-section .service-item {
   display: grid;
-  margin-block: 3rem;
+  margin-block: 6rem;
   gap: 1rem;
 }
 .service-section .service-item .services-text-container h1,

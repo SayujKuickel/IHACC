@@ -627,6 +627,7 @@
 .half-banner-wrapper {
   position: relative;
   color: white;
+  overflow: hidden;
 }
 .half-banner-wrapper img {
   width: 100%;

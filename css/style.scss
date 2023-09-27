@@ -157,6 +157,7 @@
   display: flex;
   flex-direction: column;
   margin-block: 2rem 4rem;
+
   .mission-img-container {
     display: none;
   }
@@ -211,7 +212,6 @@
     grid-template-columns: 2fr 3fr;
 
     .mission-img-container {
-      height: 100%;
       display: block;
       position: relative;
 
@@ -223,7 +223,12 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(41, 171, 226, 0.6);
+        background-color: rgba(41, 171, 226, 0.5);
+      }
+
+      img {
+        object-fit: cover;
+        height: 100%;
       }
     }
 
@@ -323,13 +328,35 @@
 }
 
 .ndis {
+  @media screen and (width> 768px) {
+    padding: 2rem;
+  }
+
   div:nth-child(1),
   div:nth-child(2) {
     display: grid;
     height: 100%;
     place-content: center;
   }
+
+  div:nth-child(1) {
+    img {
+      margin-inline: auto;
+    }
+    p {
+      width: 75%;
+      text-align: center;
+      margin-inline: auto;
+    }
+  }
+
   .ndis-logo {
     width: 70%;
+  }
+
+  div:nth-child(2) {
+    img {
+      width: 100%;
+    }
   }
 }

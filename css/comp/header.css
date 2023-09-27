@@ -3,15 +3,18 @@
   color: white;
   padding: 0.5rem 3rem;
 }
+@media screen and (width < 768px) {
+  .duotone-header {
+    padding: 0.5rem;
+  }
+  .duotone-header .container {
+    flex-direction: column;
+  }
+}
 .duotone-header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-@media screen and (width < 768px) {
-  .duotone-header .container {
-    flex-direction: column;
-  }
 }
 .duotone-header .container ul {
   list-style: none;
@@ -38,6 +41,11 @@
 .page-header {
   padding: 1rem 3rem;
   background: white;
+}
+@media screen and (width < 768px) {
+  .page-header {
+    padding: 1rem 0.5rem;
+  }
 }
 .page-header .container {
   display: flex;

@@ -3,14 +3,17 @@
   color: white;
   padding: 0.5rem 3rem;
 
+  @media screen and (width < 768px) {
+    padding: 0.5rem;
+    .container {
+      flex-direction: column;
+    }
+  }
+
   .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    @media screen and (width < 768px) {
-      flex-direction: column;
-    }
 
     ul {
       list-style: none;
@@ -37,6 +40,10 @@
 }
 .page-header {
   padding: 1rem 3rem;
+
+  @media screen and (width < 768px) {
+    padding: 1rem 0.5rem;
+  }
   background: white;
 
   .container {

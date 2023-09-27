@@ -267,7 +267,6 @@
     grid-template-columns: 2fr 3fr;
   }
   .mission-vision-wrapper .mission-img-container {
-    height: 100%;
     display: block;
     position: relative;
   }
@@ -278,7 +277,12 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(41, 171, 226, 0.6);
+    background-color: rgba(41, 171, 226, 0.5);
+  }
+  .mission-vision-wrapper .mission-img-container img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 100%;
   }
   .mission-vision-wrapper .text-section {
     display: flex;
@@ -362,12 +366,28 @@
   margin-block: 2rem 1rem;
 }
 
+@media screen and (width > 768px) {
+  .ndis {
+    padding: 2rem;
+  }
+}
 .ndis div:nth-child(1),
 .ndis div:nth-child(2) {
   display: grid;
   height: 100%;
   place-content: center;
 }
+.ndis div:nth-child(1) img {
+  margin-inline: auto;
+}
+.ndis div:nth-child(1) p {
+  width: 75%;
+  text-align: center;
+  margin-inline: auto;
+}
 .ndis .ndis-logo {
   width: 70%;
+}
+.ndis div:nth-child(2) img {
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */
