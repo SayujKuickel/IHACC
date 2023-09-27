@@ -136,6 +136,10 @@
   -moz-text-fill-color: transparent !important;
 }
 
+.fa-youtube:hover {
+  color: red;
+}
+
 .main-content {
   width: min(100ch, 100% - 1rem);
   margin-inline: auto;
@@ -143,26 +147,35 @@
 }
 
 .services-wrapper {
-  --__no-of-cols: 3;
-  display: grid;
-  grid-template-columns: repeat(var(--__no-of-cols), 1fr);
-  width: min(70vw, 100% - 2rem);
-  margin-inline: auto;
-  row-gap: 2rem;
+  margin-block: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (width < 768px) {
+  .services-wrapper .service-card {
+    flex-basis: 15rem;
+  }
 }
 .services-wrapper .service-card {
   display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
+  flex-basis: 25%;
 }
 .services-wrapper .service-card .img-container {
-  width: 70%;
+  width: 12rem;
   overflow: hidden;
   border-radius: 100vw;
+  margin-block-end: 0.5rem;
+  aspect-ratio: 1;
 }
 .services-wrapper .service-card .img-container img {
-  aspect-ratio: 1;
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -170,7 +183,7 @@
   margin: 0;
 }
 .services-wrapper .service-card .service-label {
-  color: var(--clr-primary-800);
+  color: var(--clr-primary-500);
   font-size: 1.125rem;
   margin-bottom: 0.5rem;
   text-transform: capitalize;
@@ -179,18 +192,6 @@
   line-height: 1.4;
   width: 80%;
   font-size: 0.8rem;
-}
-@media screen and (width < 768px) {
-  .services-wrapper {
-    --__no-of-cols: 2;
-    width: 80%;
-  }
-}
-@media screen and (width < 500px) {
-  .services-wrapper {
-    margin-inline: auto;
-    width: 100%;
-  }
 }
 
 .mission-vision-wrapper {
@@ -504,11 +505,12 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
 }
 .gallery .gallery-item {
-  flex-basis: 12rem;
+  flex-basis: 15rem;
   aspect-ratio: 1;
-  flex-grow: 1;
   border-radius: 1rem;
   overflow: hidden;
 }

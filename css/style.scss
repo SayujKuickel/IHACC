@@ -73,6 +73,9 @@
   -webkit-text-fill-color: transparent !important;
   -moz-text-fill-color: transparent !important;
 }
+.fa-youtube:hover {
+  color: red;
+}
 
 .main-content {
   width: min(100ch, 100% - 1rem);
@@ -81,26 +84,34 @@
 }
 
 .services-wrapper {
-  --__no-of-cols: 3;
-  display: grid;
-  grid-template-columns: repeat(var(--__no-of-cols), 1fr);
-
-  width: min(70vw, 100% - 2rem);
-  margin-inline: auto;
-  row-gap: 2rem;
-
+  margin-block: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  @media screen and (width < 768px) {
+    .service-card {
+      flex-basis: 15rem;
+    }
+  }
   .service-card {
     display: flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
+    flex-basis: 25%;
 
     .img-container {
-      width: 70%;
+      width: 12rem;
       overflow: hidden;
       border-radius: 100vw;
+      margin-block-end: 0.5rem;
+      aspect-ratio: 1;
+
       img {
-        aspect-ratio: 1;
+        width: 100%;
+        height: 100%;
         object-fit: cover;
       }
     }
@@ -110,7 +121,7 @@
     }
 
     .service-label {
-      color: var(--clr-primary-800);
+      color: var(--clr-primary-500);
       font-size: 1.125rem;
       margin-bottom: 0.5rem;
       text-transform: capitalize;
@@ -120,17 +131,6 @@
       width: 80%;
       font-size: 0.8rem;
     }
-  }
-
-  @media screen and (width < 768px) {
-    --__no-of-cols: 2;
-    width: 80%;
-  }
-  @media screen and (width < 500px) {
-    // --__no-of-cols: 1;
-
-    margin-inline: auto;
-    width: 100%;
   }
 }
 
@@ -503,11 +503,12 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
 
   .gallery-item {
-    flex-basis: 12rem;
+    flex-basis: 15rem;
     aspect-ratio: 1;
-    flex-grow: 1;
 
     border-radius: 1rem;
     overflow: hidden;
