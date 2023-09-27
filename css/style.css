@@ -498,4 +498,23 @@
     padding: 1rem 0.5rem;
     background: var(--clr-primary-500);
   }
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.gallery .gallery-item {
+  flex-basis: 12rem;
+  aspect-ratio: 1;
+  flex-grow: 1;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.gallery .gallery-item img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=style.css.map */
