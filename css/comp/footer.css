@@ -2,6 +2,7 @@ footer {
   background: var(--clr-primary-500);
   padding-block: 2rem;
   color: white;
+  margin-block-start: 5vw;
 }
 footer a {
   text-decoration: none;
@@ -67,4 +68,11 @@ footer .logo-img {
 }
 footer ul[role=list] li {
   font-weight: 500;
+}
+
+.copyright {
+  font-size: small;
+}
+.copyright a {
+  text-decoration: none;
 }/*# sourceMappingURL=footer.css.map */

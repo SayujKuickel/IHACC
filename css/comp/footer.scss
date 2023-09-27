@@ -1,110 +1,9 @@
-// footer {
-//   * {
-//     border: 1px solid black;
-//   }
-
-//   margin-block-start: 5rem;
-//   background: var(--clr-primary-800);
-//   color: white;
-//   padding: 4rem 2rem;
-
-//   a:hover {
-//     color: white;
-//   }
-
-//   .footer-grid {
-//     margin-inline: 6rem;
-//     display: grid;
-//     gap: 1.5rem;
-//     grid-template-columns: repeat(var(--__footer-columns), 1fr);
-
-//     ul {
-//       list-style: none;
-//       padding: 0;
-//     }
-
-//     .links {
-//       color: var(--clr-white-400);
-//       font-weight: 800;
-//     }
-//   }
-
-//   .logo-img {
-//     // width: 70%;
-//     max-width: 12rem;
-//     min-width: 10rem;
-//     filter: brightness(0) invert(1);
-//   }
-
-//   .logo-img + p {
-//     color: white;
-//     width: 70%;
-//     margin-block: 1rem;
-//     font-size: 14px;
-//   }
-//   .label {
-//     color: var(--clr-white-100);
-//     position: relative;
-
-//     padding-block: 0.4rem;
-//     width: fit-content;
-
-//     &:hover {
-//       &::before {
-//         width: 100%;
-//       }
-//     }
-
-//     &::before {
-//       content: "";
-//       width: 35%;
-//       height: 0.2rem;
-
-//       z-index: 0;
-
-//       background: var(--clr-primary-500);
-
-//       bottom: 0;
-//       left: 0;
-//       position: absolute;
-
-//       transition: width 0.3s ease;
-//     }
-//   }
-
-//   .links-wrapper {
-//     display: flex;
-//     align-items: center;
-//     gap: 1rem;
-//     font-size: var(--fs-400);
-//   }
-
-//   .copyright {
-//     font-size: 0.8rem;
-//     font-weight: 400;
-//     text-transform: capitalize;
-//     margin-block-start: 3rem;
-//   }
-
-//   @media screen and (max-width: 768px) {
-//     --__footer-columns: 2;
-
-//     padding: 2rem 1rem;
-
-//     .footer-grid {
-//       margin-inline: 0;
-//     }
-//   }
-//   @media screen and (max-width: 425px) {
-//     --__footer-columns: 1;
-//     padding: 1rem;
-//   }
-// }
-
 footer {
   background: var(--clr-primary-500);
   padding-block: 2rem;
   color: white;
+
+  margin-block-start: 5vw;
 
   a {
     text-decoration: none;
@@ -177,5 +76,12 @@ footer {
 
   ul[role="list"] li {
     font-weight: 500;
+  }
+}
+
+.copyright {
+  font-size: small;
+  a {
+    text-decoration: none;
   }
 }
