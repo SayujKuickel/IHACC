@@ -51,6 +51,14 @@
       --fs-#{$size}: #{$value};
     }
   }
+
+  @media screen and (width > 768px) {
+    @each $size, $fontsize in $type-scale {
+      @each $size, $value in $fontsize {
+        --fs-#{$size}: calc(#{$value} * 1.25);
+      }
+    }
+  }
 }
 
 @each $color, $shades in $colors {
@@ -122,14 +130,15 @@
 
     .service-label {
       color: var(--clr-primary-500);
-      font-size: 1.125rem;
-      margin-bottom: 0.5rem;
+      font-size: var(--fs-400);
+      font-weight: 700;
+      margin-bottom: 0.25rem;
       text-transform: capitalize;
     }
     .service-subtext {
-      line-height: 1.4;
+      line-height: 1.2;
       width: 80%;
-      font-size: 0.8rem;
+      font-size: var(--fs-200);
     }
   }
 }
@@ -516,6 +525,26 @@
       height: 100%;
       width: 100%;
       object-fit: cover;
+    }
+  }
+}
+
+.pricing-section-wrapper {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  & > div {
+    flex-basis: 50%;
+  }
+
+  .img-container {
+    display: grid;
+    place-content: center;
+    img {
+      mix-blend-mode: multiply;
+      width: 100%;
+      scale: 1.25;
     }
   }
 }

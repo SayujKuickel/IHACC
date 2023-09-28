@@ -57,6 +57,16 @@
   --fs-700: 2.441rem;
   --fs-800: 3.052rem;
 }
+@media screen and (width > 768px) {
+  :root {
+    --fs-300: calc(1rem * 1.25);
+    --fs-400: calc(1.25rem * 1.25);
+    --fs-500: calc(1.563rem * 1.25);
+    --fs-600: calc(1.953rem * 1.25);
+    --fs-700: calc(2.441rem * 1.25);
+    --fs-800: calc(3.052rem * 1.25);
+  }
+}
 
 .clr-white-100 {
   color: #ffffff;
@@ -184,14 +194,15 @@
 }
 .services-wrapper .service-card .service-label {
   color: var(--clr-primary-500);
-  font-size: 1.125rem;
-  margin-bottom: 0.5rem;
+  font-size: var(--fs-400);
+  font-weight: 700;
+  margin-bottom: 0.25rem;
   text-transform: capitalize;
 }
 .services-wrapper .service-card .service-subtext {
-  line-height: 1.4;
+  line-height: 1.2;
   width: 80%;
-  font-size: 0.8rem;
+  font-size: var(--fs-200);
 }
 
 .mission-vision-wrapper {
@@ -519,4 +530,21 @@
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.pricing-section-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+.pricing-section-wrapper > div {
+  flex-basis: 50%;
+}
+.pricing-section-wrapper .img-container {
+  display: grid;
+  place-content: center;
+}
+.pricing-section-wrapper .img-container img {
+  mix-blend-mode: multiply;
+  width: 100%;
+  scale: 1.25;
 }/*# sourceMappingURL=style.css.map */

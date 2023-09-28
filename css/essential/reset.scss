@@ -44,6 +44,12 @@ body {
 
 a:not([class]) {
   text-decoration-skip-ink: auto;
+  text-decoration: none;
+  color: currentColor;
+}
+
+p {
+  font-size: var(--fs-300);
 }
 
 img,
