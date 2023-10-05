@@ -1,0 +1,181 @@
+.body-content {
+  width: min(120ch, 100% - 3rem);
+  margin-inline: auto;
+}
+
+.text-center {
+  text-align: center;
+  display: block;
+  margin-inline: auto;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.subtext {
+  text-align: center;
+  max-width: 60ch;
+  margin: 0;
+}
+
+.section-title {
+  margin: 0;
+  font-weight: 800;
+  margin-bottom: 0.6rem;
+  text-align: center;
+  font-size: var(--fs-700);
+  color: var(--clr-primary-500);
+}
+
+.section-gap {
+  margin-block-start: 5rem;
+}
+
+.label {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.grid-2 {
+  --___noOfCols: 2;
+  display: grid;
+  grid-template-columns: repeat(var(--___noOfCols), 1fr);
+
+  @media screen and (width < 768px) {
+    --___noOfCols: 1;
+  }
+}
+
+/* Margin Inline Auto */
+.mi-auto {
+  margin-inline: auto;
+}
+
+@for $i from 0 through 10 {
+  .gap-#{$i} {
+    gap: #{$i}rem;
+  }
+}
+
+.m-0 {
+  margin: 0;
+}
+.p-0 {
+  padding: 0;
+}
+
+@for $i from 0 through 10 {
+  .mi-#{$i} {
+    margin-inline: #{$i}rem;
+  }
+
+  .mb-#{$i} {
+    margin-block: #{$i}rem;
+  }
+}
+
+@for $i from 0 through 10 {
+  .mis-#{$i} {
+    margin-inline-start: #{$i}rem;
+  }
+  .mie-#{$i} {
+    margin-inline-end: #{$i}rem;
+  }
+
+  .mbs-#{$i} {
+    margin-block-start: #{$i}rem;
+  }
+  .mbe-#{$i} {
+    margin-block-end: #{$i}rem;
+  }
+}
+
+@for $i from 0 through 10 {
+  .pi-#{$i} {
+    padding-inline: #{$i}rem;
+  }
+
+  .pb-#{$i} {
+    padding-block: #{$i}rem;
+  }
+}
+
+@for $i from 0 through 10 {
+  .pis-#{$i} {
+    padding-inline-start: #{$i}rem;
+  }
+  .pie-#{$i} {
+    padding-inline-end: #{$i}rem;
+  }
+
+  .pbs-#{$i} {
+    padding-block-start: #{$i}rem;
+  }
+  .pbe-#{$i} {
+    padding-block-end: #{$i}rem;
+  }
+}
+
+.half-banner-wrapper {
+  position: relative;
+  color: white;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+  }
+
+  .half-banner-subtext {
+    max-width: 60ch;
+    text-align: center;
+    margin-inline: auto;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 2, 0.5);
+  }
+
+  .half-banner-content {
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: space-between;
+      padding-block: 3rem;
+
+      h1 {
+        text-align: center;
+        font-weight: 700;
+        font-size: var(--fs-700);
+      }
+
+      @media screen and (width > 768px) {
+        h1 {
+          font-size: calc(var(--fs-700) * 2);
+          margin-block: 1rem 1.5rem;
+          margin-block-end: 0;
+
+          text-align: center;
+          font-weight: 800;
+        }
+      }
+    }
+  }
+}
